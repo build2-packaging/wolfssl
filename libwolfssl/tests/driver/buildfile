@@ -2,4 +2,4 @@ import libs = libwolfssl%lib{wolfssl}
 
 c.poptions += "-DUSE_FLAT_TEST_H"
 
-exe{test}: {h c}{test} $libs testscript
+exe{test}: {h c}{test} certs/file{**} $libs testscript
