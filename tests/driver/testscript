@@ -1,0 +1,3 @@
+: main
+cp -r $src_root/driver/certs .;
+$* >| &cert.der &cert.pem &certecc.der &certecc.pem &certeccrsa.der &certeccrsa.pem &ecc-key.der &ecc-key.pem &ecc-key-pkcs8.der &ecc-public-key.der &key.der &key.pem &othercert.der &othercert.pem
