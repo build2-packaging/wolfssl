@@ -117,8 +117,9 @@ c.libs += "-lm"
 ./: lib{wolfssl}: \
     wolfssl/h{**} \
     wolfcrypt/src/c{hmac hash cpuid kdf random sha256 rsa aes cmac des3 sha sha512 sha3 logging wc_port error wc_encrypt signature wolfmath memory dh asn coding poly1305 arc4 md5 pwdbased pkcs12 blake2b blake2s chacha chacha20_poly1305 tfm ecc curve25519 ed25519 ge_operations curve448 ed448 fe_448 ge_448} \
-    wolfcrypt/src/h{misc.c asm.c evp.c bio.c} \
+    wolfcrypt/src/h{misc.c asm.c evp.c} \
     src/c{internal wolfio keys ssl tls tls13 ocsp crl} \
+    src/h{bio.c} \
     include/h{**} \
     h{config}
 
