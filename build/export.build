@@ -1,0 +1,6 @@
+$out_root/
+{
+  include libwolfssl/
+}
+
+export $out_root/libwolfssl/$import.target

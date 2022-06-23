@@ -1,0 +1,18 @@
+using c
+
+h{*}: extension = h
+c{*}: extension = c
+
+h{*}: c.importable = true
+
+test.target = $c.target
+
+if ($c.id == 'gcc' || $c.id == 'clang' || $c.id == 'clang-apple' || $c.id == 'clang-emscripten')
+{
+    c.poptions += "-Werror" "-Wno-pragmas" "-Wall" "-Wextra" "-Wunknown-pragmas" "-Waddress" "-Warray-bounds" "-Wbad-function-cast" "-Wchar-subscripts" "-Wcomment" "-Wfloat-equal" "-Wformat-security" "-Wformat=2" "-Wmissing-field-initializers" "-Wmissing-noreturn" "-Wmissing-prototypes" "-Wnested-externs" "-Woverride-init" "-Wpointer-arith" "-Wpointer-sign" "-Wredundant-decls" "-Wshadow" "-Wshorten-64-to-32" "-Wsign-compare" "-Wstrict-overflow=1" "-Wstrict-prototypes" "-Wswitch-enum" "-Wundef" "-Wunused" "-Wunused-result" "-Wunused-variable" "-Wwrite-strings" "-fwrapv"
+    c.coptions += "-fvisibility=hidden"
+}
+else
+{
+    fail "Unsupported Compiler"
+}
